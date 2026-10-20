@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Quiz 2</title>
+    </head>
+    <script>
+         function scoreExam() {
+                var score = 0;
+                //Question 1
+                if(document.getElementById("question_1_a3").checked == true) {
+                    score = score + 1;
+                    document.getElementById("question_1_result").innerHTML = "Correct";
+                }
+                else
+                {
+                    document.getElementById("question_1_result").innerHTML = "Incorrect";
+                }
+
+                //Question 2 - use logical AND operator (&&)
+                if(document.getElementById("question_2_a2").checked == true && document.getElementById("question_2_a4").checked == true && document.getElementById("question_2_a1").checked == true)
+                {
+                    score = score + 1;
+                    document.getElementById("question_2_result").innerHTML = "Correct";
+                }
+                else
+                {
+                    document.getElementById("question_2_result").innerHTML = "Incorrect";
+                }
+                //total score
+                document.getElementById("final_score").innerHTML = "Total Points: " + score;
+            }
+    </script>
+    <body>
+        <form>
+            <fieldset>
+                <h1>1. Do Cows drink Milk?</h1>
+                A) <input type="radio" id="question_1_a2" name="question_1" value="2">
+                    <label>True</label><br>
+                B) <input type="radio" id="question_1_a3" name="question_1" value="4">
+                    <label>False</label><br>
+                <div id="question_1_result">&nbsp;</div>
+                <br>
+            </fieldset> 
+
+            <fieldset>
+            <!---Checkboxes for cereal-->
+            <h1>2. How do you make cereal?</h1>
+
+                A) <input type="checkbox" id="question_2_a1" name="question_2_a1" value="23">
+                    <label>Bowl</label><br>
+                B) <input type="checkbox" id="question_2_a2" name="question_2_a2" value="44">
+                    <label>Milk</label><br>
+                C) <input type="checkbox" id="question_2_a3" name="question_2_a3" value="45">
+                    <label>Fork</label><br>
+                D) <input type="checkbox" id="question_2_a4" name="question_2_a4" value="100">
+                    <label>Spoon</label><br>
+                <div id="question_2_result">&nbsp;</div>
+        </fieldset>
+
+            <input type="button" class="button" onclick="scoreExam()" value="submit exam">
+            <div id="final_score">&nbsp;</div>
+        </form>
+    </body>
+</html>
