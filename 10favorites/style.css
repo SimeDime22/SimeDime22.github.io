@@ -1,0 +1,19 @@
+body {
+    background-color: blue
+    padding: 20px;
+}
+
+h1 {
+    color: navy;
+}
+
+ul {
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+    border: 1px solid black;
+}
+
+li {
+    margin: 5px 0;
+}
